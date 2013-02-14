@@ -1,0 +1,26 @@
+<h1>USERS LIST</h1>
+
+<DIV style=" color: blue; ";>
+
+	<table border="2" width= "400px">
+    	<tr>
+      		<th>username</th>
+      		<th>password</th>
+          <th></th>
+    	</tr>
+  
+    	<% @valids.each do |valid| %>
+      	<tr>
+        	<td><%= valid.username %></td>
+        	<td><%= valid.password %></td>
+        	<td><%= link_to 'remove', valid, confirm: 'Are you sure?', method: :delete %></td>
+      	</tr>
+    	<% end %>
+  </table> 	
+
+    <br/><br/>
+    <%= link_to "BACK", new_session_path %>
+
+</DIV>
+<br/><br/>
+<DIV style = "color: green;";><%= flash[:notice]%></DIV>

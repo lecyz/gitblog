@@ -1,0 +1,2 @@
+module ValidsHelper
+end

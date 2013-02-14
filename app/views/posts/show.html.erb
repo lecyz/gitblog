@@ -1,0 +1,10 @@
+
+<h1><%= @post.title %></h1>
+
+<%= @post.content %>
+<br/><br/>
+
+<%= link_to 'BACK TO POSTS', posts_path %>
+
+<br/><br/>
+<%= flash[:notice] %>

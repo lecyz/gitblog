@@ -1,0 +1,52 @@
+<DIV style="position: absolute; top: 10px; left: 150px;";><h1>WELCOME REALPOSTING ...</h1></DIV>
+
+<DIV style="position: absolute; top: 100px; left: 100px";>
+	<fieldset>
+    <legend style="color:black;font-weight:bold;">LOGIN</legend>
+	
+		<%= form_tag sessions_path, method: :post do%>
+			
+			<%= label_tag :username %><br/>
+			<%= text_field_tag :un %>
+		
+		<br/><br/>
+	
+			<%= label_tag :password %><br/>
+			<%= password_field_tag :pass %>
+
+    	<br/><br/>
+
+    		<%= submit_tag 'SIGN IN' %>
+
+		<% end %>
+	</fieldset>
+</DIV>
+
+<br/><br/>
+
+<DIV style="position: absolute; top: 100px; left: 350px; color: blue; ";>
+	<fieldset>
+    <legend style="color:blue;font-weight:bold;">NEW USER</legend>
+		
+		<%= form_for Valid.new do |v|%>
+			
+			<%= v.label :username %><br/>
+			<%= v.text_field :username %>
+		
+		<br/><br/>
+			
+			<%= v.label :password %><br/>
+			<%= v.password_field :password %>
+		
+		<br/><br/>
+			 
+			<%= v.submit "SIGN UP"%>
+		
+		<% end %>
+	</fieldset>
+</DIV>
+
+<br/><br/>
+
+<DIV style = "position: absolute; top: 350px; left: 100px; color: red;";><%= flash[:notice]%></DIV>
+<DIV style = "position: absolute; top: 370px; left: 100px; color: red;";><%= flash[:error]%></DIV>
