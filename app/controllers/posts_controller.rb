@@ -66,7 +66,7 @@ class PostsController < ApplicationController
     def login_required
 
       if session[:user_id].present?
-        flash[:notice] = "SOMEONE IS LOGGED"
+        flash[:notice] = "LOGGED"
         # redirect_to posts_path
       else
         flash[:error] = "YOU MUST BE LOGIN !"
