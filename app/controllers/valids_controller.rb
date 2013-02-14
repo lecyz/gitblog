@@ -8,7 +8,7 @@ class ValidsController < ApplicationController
   def create
    	@valid = Valid.new(params[:valid])
     if @valid.save
-      flash[:notice] = "NEW USER CREATED"
+      flash[:notice] = "NEW USER ADDED"
       redirect_to valids_url
     else
       flash[:notice] = "YOU MUST ENTER THE VALUE !!!"
